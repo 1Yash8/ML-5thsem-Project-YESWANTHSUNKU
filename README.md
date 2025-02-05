@@ -1,9 +1,60 @@
-# ML-5thsem-project-YESWANTH
-#RA024,024,001,016,055
-Machine Learning project to Predict Energy Consumption Public Code
+# Energy Consumption Prediction
 
-ABSTRACT:
-The purpose of this research was to predict energy consumption using the data of Finland's transmission system operator. The objective of this project was to test if a machine learning model can yield good enough results in a complex forecasting problem, exploring machine learning techniques and developing a data-driven model for forecasting energy. The data contained 6-year hourly electrical consumption in Finland, and it is a univariate time series, as it is seasonal. We used a long-short term memory (LSTM) model to train the data. The model was evaluated using root mean squared error (RMSE) to be directly comparable to energy readings in the data. The result shows that electricity consumption can be predicted using machine learning algorithms so we can use the results to deploy renewable energy, plan for high/low load days, and reduce wastage from polluting on reserve standby generation.
+This repository contains a project for predicting energy consumption using machine learning techniques.  The goal is to accurately forecast future energy needs based on historical data and other relevant features.
 
-MODEL IMPLEMENTATION:
-The data was imported from Finland's transmission system operator as a CSV file and then exported to a GitHub repository. There was a total number of 52965 observations and 5 variables in this dataset and no missing values were found. The minimum load volume is 5341 MWh, and the maximum load volume is 15105 MWh along with an average volume of 9488.750519 MWh. The data is univariate time series, where there is a need for one column to present time and another one to present energy consumption. For predicting day consumption, data were down-sampled using resample function. This function changed the data from hourly frequency to daily frequency. Training the LSTM model was done using the training set and the validation dataset for testing the results through the training process. The learning algorithm worked through the entire training dataset 60 times (Epoch), and the model weights were updated after each batch where the batch size is 20.
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Dataset](#dataset)
+- [Methodology](#methodology)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Evaluation](#model-evaluation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Introduction
+
+Accurate energy consumption prediction is crucial for efficient resource management, grid stability, and cost optimization. This project leverages machine learning algorithms to analyze historical energy consumption patterns and predict future demand.  We explore various models and feature engineering techniques to achieve high prediction accuracy.
+
+## Dataset
+
+The dataset used for this project is [Describe the dataset here.  Include details like:
+    * Source of the data (e.g., publicly available, collected from sensors, etc.)
+    * Size of the dataset (number of data points, time range)
+    * Features included (e.g., time of day, day of week, weather data, temperature, humidity, etc.)
+    * Target variable (energy consumption)]
+
+You can download the dataset from [Link to the dataset if publicly available, or instructions on how to obtain it].  The data should be placed in the data/ directory.
+
+## Methodology
+
+The project follows these steps:
+
+1. *Data Preprocessing:* Cleaning, transforming, and preparing the data for model training. This may include handling missing values, outlier detection, and feature scaling.
+2. *Feature Engineering:* Creating new features from existing ones to improve model performance.  (e.g., creating time-based features like hour of day, day of week, month, or lagged variables of energy consumption).
+3. *Model Selection:* Training and comparing different machine learning models, such as:
+    * [List the models you used, e.g., Linear Regression, Support Vector Regression, Random Forest, Gradient Boosting (XGBoost, LightGBM), LSTM networks (if using time series data)]
+4. *Model Evaluation:* Assessing the performance of the trained models using appropriate metrics. [Mention the metrics used, e.g. Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), R-squared].
+5. *Hyperparameter Tuning:* Optimizing the model parameters to achieve the best possible performance. [Mention any techniques used for tuning, such as Grid Search, Randomized Search, Bayesian Optimization].
+6. *Prediction:* Using the best trained model to predict future energy consumption.
+
+## Requirements
+You can install these libraries using pip:
+
+```bash
+pip install -r requirements.txt
+pandas
+numpy
+scikit-learn
+matplotlib
+xgboost
+git clone [https://github.com/1Yash8/energy-consumption-prediction.git](https://www.google.com/search?q=https://github.com/1Yash8/energy-consumption-prediction.git)
+
+The project requires the following libraries:
+cd energy-consumption-prediction
+python3 -m venv .venv  # or python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt'''
